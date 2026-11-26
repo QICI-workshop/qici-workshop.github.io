@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="202" height="100" viewBox="0 0 202 100" role="img" aria-labelledby="title">
+  <title id="title">QICI</title>
+  <g fill="#5cbce0">
+<g id="outer-letters">
+  <path id="q-bowl" d="M 63.58 1.9 A 49.798 49.965 0 1 0 63.58 97.838 L 63.58 82.576 A 35.404 35.647 0 1 1 63.58 17.136 Z"/>
+  <path id="q-tail" d="M 49.54 64.16 L 68.47 64.19 L 76.17 73.37 A 35.404 35.647 0 0 0 80.78 66.612 V 80.63 H 63.66 Z"/>
+  <path id="c-upper-arm" d="M 117.65 1.845 A 49.664 49.975 0 0 1 176.661 29.38 L 160.381 29.38 A 35.318 35.639 0 0 0 117.65 17.068 Z"/>
+  <path id="c-lower-arm" d="M 176.706 70.27 A 49.664 49.975 0 0 1 117.65 97.907 L 117.65 82.656 A 35.318 35.639 0 0 0 160.432 70.27 Z"/>
+  <ellipse id="i-dot" cx="193.678" cy="30.156" rx="8.189" ry="8.178"/>
+  <path id="i-stem" d="M 188.32 47.52 H 199.27 L 199.18 99.93 H 188.32 Z"/>
+</g>
+<g id="central-linework">
+    <path id="upper-left-to-lower-right" d="
+      M 63.2,3.18 H 113.95 V 15.45 H 96.75 V 43.66
+      L 86.90,53.50 V 86.75 H 69.70 V 89.24 H 117.95
+      V 91.69 H 67.25 V 84.32 H 84.46 V 51.18
+      L 94.30,41.34 V 12.98 H 111.51 V 5.60 H 63.2 Z"/>
+    <path id="upper-right-to-lower-left" d="
+      M 117.95,8.07 V 10.53 H 69.70 V 12.98 H 86.90 V 41.18
+      L 96.75,51.03 V 84.32 H 113.95 V 96.60 H 63.2
+      V 94.18 H 111.51 V 86.75 H 94.30 V 53.53
+      L 84.46,43.69 V 15.45 H 67.25 V 8.07 Z"/>
+  </g>
+  <g id="inner-arc-details">
+    <path id="q-upper-return" d="M 68.10,19.11 H 80.78 V 33.01 C 78.45,28.35 74.40,23.74 68.10,19.11 Z"/>
+    <path id="c-upper-return" d="M 112.84,19.11 H 100.44 V 32.77 C 102.49,28.23 106.52,23.69 112.84,19.11 Z"/>
+    <path id="c-lower-return" d="M 112.85,80.63 H 100.44 V 66.93 C 102.50,71.51 106.53,76.02 112.85,80.63 Z"/>
+  </g>
+  </g>
+</svg>
