@@ -9,13 +9,28 @@
 .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px 26px;margin-top:26px}.programme-button{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:62px;padding:16px 32px;background:var(--green);border:1px solid var(--green);border-radius:6px;color:#fff;font-size:20px;font-weight:600;line-height:1.4;text-decoration:none}.programme-button:hover{background:var(--ink);border-color:var(--ink);text-decoration:none}.hero-actions .calendar{margin-top:0}@media(max-width:700px){.programme-button{width:100%}.hero-actions{gap:16px}}
 
 .back-to-top{position:fixed;right:24px;bottom:24px;bottom:max(24px,env(safe-area-inset-bottom));z-index:10;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:10px 16px;border:1px solid var(--green);border-radius:24px;background:var(--green);color:#fff;font-size:13px;line-height:1.4;text-decoration:none;box-shadow:0 3px 12px #193b3826}.back-to-top:hover{background:var(--ink);text-decoration:none}.back-to-top[hidden]{display:none}@media(max-width:700px){.back-to-top{right:16px;bottom:16px;bottom:max(16px,env(safe-area-inset-bottom))}footer{padding-bottom:85px}}
+.venue-map {
+  display: block;
+  width: 100%;
+  height: clamp(210px, 30vw, 260px);
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.venue-map-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: 10px;
+  font-size: 14px;
+}
 </style>
 <link rel="stylesheet" href="assets/header.css">
 </head>
 <body id="top"><header><div class="wrap nav-wrap">
 <div class="workshop-identity">
   <div class="workshop-logos">
-    <img class="qici" src="assets/qici.svg" width="202" height="100" alt="Quantum Information and Computation Initiative (QICI)">
+    <img class="qici" src="assets/qici-full.png" width="1035" height="800" alt="Quantum Information and Computation Initiative (QICI)">
     <img class="cds" src="assets/hku-cds.svg" width="1107" height="373" alt="HKU School of Computing and Data Science">
   </div>
   <a class="brand" href="#home">QICI Shanghai workshop</a>
@@ -53,7 +68,21 @@
 </div></section>
 <section id="registration"><h2>Registration</h2><div class="section-content"><p>Registration is closed.</p><p>If you need assistance, please contact <a href="mailto:longyun@connect.hku.hk">Longyun Chen</a>.</p></div></section>
 <section id="contact"><h2>Contact</h2><div class="section-content"><p>Longyun Chen<br><a href="mailto:longyun@connect.hku.hk">longyun@connect.hku.hk</a></p></div></section>
-<section id="venue"><h2>Venue</h2><div class="section-content"><p>Building 3, 2/F (AI Labs) (tentative)</p><p class="venue-details">HKU CDS Campus, Zhangjiang, Shanghai</p></div></section>
+<section id="venue">
+  <h2>Venue</h2>
+  <div class="section-content">
+    <p>Building 3, 2/F (AI Labs) (tentative)</p>
+    <p class="venue-details">HKU CDS Campus, Zhangjiang, Shanghai<br>
+      500 Fangchun Road, Pudong, Shanghai · <span lang="zh-CN">上海市浦东新区方春路500号</span></p>
+    <iframe class="venue-map" title="Map of the HKU CDS campus in Zhangjiang, Shanghai"
+      src="https://www.google.com/maps?q=500%20Fangchun%20Road%2C%20Pudong%2C%20Shanghai%2C%20China&amp;z=16&amp;hl=en&amp;output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="venue-map-links">
+      <a href="https://ditu.amap.com/place/B0LKXUOH6U">Open in Amap <span lang="zh-CN">(高德地图)</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=500%20Fangchun%20Road%2C%20Pudong%2C%20Shanghai%2C%20China">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
 </main><footer><div class="wrap footer-inner"><span>QICI Shanghai Workshop · 2026</span><span>HKU CDS · Shanghai</span></div></footer><a class="back-to-top" href="#top" aria-label="Back to top" hidden><span aria-hidden="true">↑</span> Back to top</a>
 <script>
 (function () {
