@@ -4,15 +4,16 @@ PRODID:-//QICI//Shanghai Workshop//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:qici-shanghai-2026-1215@qici-workshop
-DTSTAMP:20261126T052426Z
-SEQUENCE:3
+DTSTAMP:20261126T065829Z
+SEQUENCE:4
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261218
 SUMMARY:QICI Shanghai Workshop
-LOCATION:Building 3\, 2/F (AI Labs)\, HKU CDS Campus\,
+LOCATION:Building 3\, 2/F (AI Labs)\, HKU CDS (Shanghai) Campus\,
   Zhangjiang\, Shanghai
 DESCRIPTION:Organized by the Quantum Information and Computation
-  Initiative (QICI) at HKU CDS. See the programme for speaking times.
+  Initiative (QICI) and HKU CDS (Shanghai). See the programme for
+  speaking times.
 URL:https://qici-workshop.github.io/programme.html
 END:VEVENT
 END:VCALENDAR
