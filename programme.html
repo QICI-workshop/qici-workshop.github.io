@@ -11,17 +11,17 @@
 
 .jump-label{font-weight:600;color:var(--ink)}.programme-note nav{padding-top:8px}.programme-note nav a{text-decoration:underline;text-underline-offset:4px}.programme-note nav a::after{content:" ↓";display:inline-block;margin-left:4px}.back-to-top{position:fixed;right:24px;bottom:24px;bottom:max(24px,env(safe-area-inset-bottom));z-index:10;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:10px 16px;border:1px solid var(--green);border-radius:24px;background:var(--green);color:#fff;font-size:13px;line-height:1.4;text-decoration:none;box-shadow:0 3px 12px #193b3826}.back-to-top:hover{background:var(--ink);text-decoration:none}.back-to-top[hidden]{display:none}@media(max-width:700px){.back-to-top{right:16px;bottom:16px;bottom:max(16px,env(safe-area-inset-bottom))}footer{padding-bottom:85px}}
 
-.talk-abstract { margin-top: .36rem; }
-.talk-abstract summary {
+:is(.talk-abstract, .speaker-bio) { margin-top: .36rem; }
+:is(.talk-abstract, .speaker-bio) summary {
   width: fit-content;
   padding: .15rem 0;
   color: var(--green);
   cursor: pointer;
   font-weight: 600;
 }
-.talk-abstract summary:hover { text-decoration: underline; }
-.talk-abstract summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
-.talk-abstract p {
+:is(.talk-abstract, .speaker-bio) summary:hover { text-decoration: underline; }
+:is(.talk-abstract, .speaker-bio) summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+:is(.talk-abstract, .speaker-bio) p {
   max-width: 72ch;
   margin: .6rem 0;
   font-size: .9375rem;
@@ -30,11 +30,24 @@
 }
 .talk-abstract math { max-width: 100%; }
 .poster-list { min-width: 0; list-style: none; margin: 0; padding: 0; }
-.poster-list li { padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.poster-list li {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  column-gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.poster-number {
+  color: var(--green);
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
 .poster-list li:first-child { padding-top: 0; }
 .poster-list li:last-child { border: 0; padding-bottom: 0; }
 .poster-list strong { display: block; line-height: 1.5; }
-.poster-list span { display: block; margin-top: .2rem; color: var(--muted); font-size: .875rem; }
+.poster-presenter { display: block; margin-top: .2rem; color: var(--muted); font-size: .875rem; }
 </style>
 <link rel="stylesheet" href="assets/header.css">
 </head>
@@ -56,6 +69,10 @@
       <summary aria-label="Abstract for Lijian Zhang’s talk">Abstract</summary>
       <p>Quantum metrology, leveraging quantum resources and manipulation techniques, offers measurement capabilities that surpass the limits of its classical counterpart. It holds the promise of driving key breakthroughs in both fundamental scientific research and practical engineering applications. Consequently, it has emerged as one of the three primary pillars of quantum information technology. Over the past two decades, this field has witnessed remarkable progress, with successful implementations across various physical systems, including photons, atoms, ions, nitrogen-vacancy (NV) centers, and nuclear magnetic resonance (NMR). Among these, photonic systems serve as a crucial platform for quantum precision measurement due to their inherent advantages, such as long coherence time and strong resistance to environmental disturbance. Furthermore, the rich and easily manipulable degrees of freedom of photons make them highly adaptable to a wide range of precision measurement scenarios. The further advancement of photonic quantum metrology relies on the development of technologies for preparing and detecting quantum probe states, the enhancement of system robustness (i.e., improved noise tolerance), and the exploration of novel measurement methodologies tailored for increasingly complex tasks. This presentation will briefly introduce the fundamental principles of photonic quantum metrology, followed by an overview of our recent research progress in quantum interferometry, weak measurement, and multi-parameter quantum precision measurement.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Lijian Zhang">Speaker bio</summary>
+      <p>Lijian received his B.S. and M. Eng. degrees at Peking University, China. He then moved to University of Oxford in UK and received his D.Phil degree in Atomic and Laser Physics. After the graduation he stayed at University of Oxford as a postdoctoral research assistant. In 2011 he joined the Max-Planck Institute for Structures and Dynamics of Matter in Hamburg as a Humboldt research fellow. Since 2013 he has been a professor at Nanjing University in China. His research interests include the generation, manipulation and detection of non-classical states of light, and their applications in communication, metrology, computation and simulation. He has published over 60 papers in international refereed journals including Science, Nature Photonics, Nature Materials, Physical Review Letters etc.</p>
+    </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-15T10:30:00+08:00">10:30</time>–<time datetime="2026-12-15T11:00:00+08:00">11:00</time></td><td>Coffee break</td></tr>
 <tr><td class="time"><time datetime="2026-12-15T11:00:00+08:00">11:00</time>–<time datetime="2026-12-15T12:00:00+08:00">12:00</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Jing Yang</strong><span class="talk-title">Quantum Sensing Meets Quantum Chaos</span>
@@ -65,6 +82,10 @@
       <p>In the first part, we will discuss Floquet chaotic dynamics generated by Haar random gates and study the scaling behavior of the average quantum Fisher information (QFI) in quantum sensing protocols. We show that in the asymptotic limit of large local Hilbert space dimension, the average QFI for Floquet random circuits can be effectively described by global random matrix models and scales linearly with the system size. We further show that such a scaling behavior is typical in the asymptotic limit.</p>
       <p>In the second part, we will show that how quantum sensing can be leveraged to diagnose quantum chaos. We show that the second order derivatives of the average QFI yields the celebrated spectral form factor (SFF) in quantum chaos. Unlike the SFF itself, QFI is self-averaging, suggesting a lower-noise experimental route to detecting spectral correlations.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Jing Yang">Speaker bio</summary>
+      <p>Jing Yang is currently an assistant professor at the Institute of Fundamental and Transdisciplinary Research, Zhejiang University, Hangzhou China. Prior to joining Zhejiang University, he was a research fellow at the Nordic Institute of Theoretical Physics (Nordita) in Sweden and a postdoctoral researcher at the University of Luxembourg. He received his Ph.D. in theoretical quantum optics from the University of Rochester and Master from Zhejiang University. His current research interests include quantum sensing and control, open quantum systems, and many-body dynamics.</p>
+    </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-15T12:00:00+08:00">12:00</time>–<time datetime="2026-12-15T13:30:00+08:00">13:30</time></td><td>Lunch</td></tr>
 <tr><td class="time"><time datetime="2026-12-15T13:30:00+08:00">13:30</time>–<time datetime="2026-12-15T14:30:00+08:00">14:30</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Augusto Smerzi</strong><span class="talk-title">Quantum Search and Sensing with an Oracle</span>
@@ -72,11 +93,19 @@
       <summary aria-label="Abstract for Augusto Smerzi’s talk">Abstract</summary>
       <p>Quantum computing and quantum metrology are typically regarded as separate branches of quantum technologies. Recent developments are beginning to blur this distinction: an unknown physical signal can directly generate an oracle and become part of a quantum algorithm itself. I will discuss a framework based on coherent quantum histories, in which different sensing evolutions are explored in superposition. The coherent dynamics implements the oracle required for quantum search while retaining metrological information about the underlying physical signal. This opens a route to combining digital quantum search and analog parameter estimation within a single coherent process on a quantum computer.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Augusto Smerzi">Speaker bio</summary>
+      <p>Augusto Smerzi is a Chair Professor at Shenzhen Technology University and holds China’s CJJX Distinguished Talent Award. He was also named a Mercator Fellow by the German Research Foundation (DFG). His research focuses on quantum metrology, particularly the theory of entanglement and the foundations of parameter estimation in quantum systems. He has helped develop the theory of quantum phase estimation and pioneered the use of Fisher information to characterize multipartite entanglement and determine fundamental limits on measurement precision. His early work focused on the nonlinear dynamics of coherent matter waves and in particular on the bosonic Josephson junction and macroscopic quantum self-trapping dynamics.</p>
+    </details>
   </td></tr>
 <tr><td class="time"><time datetime="2026-12-15T14:30:00+08:00">14:30</time>–<time datetime="2026-12-15T15:30:00+08:00">15:30</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Hao Tang</strong><span class="talk-title">Quantum architecture optimization for fault-tolerant space-time multiplexed photonic quantum circuits.</span>
     <details class="talk-abstract">
       <summary aria-label="Abstract for Hao Tang’s talk">Abstract</summary>
       <p>By employing a space-time multiplexing architecture that integrates spatial optical paths, temporal recirculation loops, and high-speed electro-optic tuning into a programmable photonic computing network, we realize large-scale Gaussian boson sampling with scalable computational resources. We further explore the correlation between the time-domain multiplexing architecture and the feature characteristics of time-sequential task data, and optimize the temporal multiplexing architecture accordingly. The proposed approach provides a scalable and programmable route toward integrated photonic quantum computing on thin-film lithium niobate platforms.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Hao Tang">Speaker bio</summary>
+      <p>Hao Tang is a Professor at Shanghai Jiao Tong University and a recipient of the Young Chang Jiang Scholar honor. She received her Bachelor's degree from Huazhong University of Science and Technology in 2010 and her Ph.D. from the University of Sheffield (UK) in 2014. She conducted postdoctoral research at Shanghai Jiao Tong University from 2015 to 2019 and was promoted to Professor in July 2024. Her research focuses on integrated photonic quantum computing and quantum simulation, with applications in machine learning, finance, and optimization. In particular, she is working toward scalable, fault-tolerant photonic quantum computing through advances in photon sources, integrated circuits, quantum computing architectures, and error correction. She was named to the Forbes China 30 Under 30 list in 2019 and received the Shanghai S&amp;T 35U35 award in 2021.</p>
     </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-15T15:30:00+08:00">15:30</time>–<time datetime="2026-12-15T16:00:00+08:00">16:00</time></td><td>Coffee break</td></tr>
@@ -84,6 +113,10 @@
     <details class="talk-abstract">
       <summary aria-label="Abstract for Huangjun Zhu’s talk">Abstract</summary>
       <p>Multiparameter pure-state metrology is limited by the incompatibility of measurements optimized for different parameters. We characterize uniform sensitivity by the Fisher floor, the smallest fraction of the quantum Fisher information (QFI) retained over all pure states and parameter directions. We prove that a constant number of fixed orthonormal bases suffices for a nearly optimal Fisher floor, independently of the Hilbert-space dimension <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math>. With high probability, five independent Haar bases already achieve a positive, dimension-independent floor, and larger constant families achieve approximate universal Fisher symmetry: they retain nearly one half of the QFI in every direction, the largest uniform fraction permitted by measurement incompatibility. The basis count is optimal up to a logarithmic factor in inverse accuracy in the large-<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math> limit. By contrast, complete mutually unbiased bases, when they exist, minimize mean Fisher anisotropy among mixtures of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d+1</annotation></semantics></math> bases, yet their Fisher floor is only <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mi>d</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">1/(d+1)</annotation></semantics></math>: optimal average balance does not ensure uniform sensitivity.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Huangjun Zhu">Speaker bio</summary>
+      <p>Prof. Huangjun Zhu got Bachelor, Master, and PhD degrees from Zhejiang University, Peking University, and National University of Singapore, respectively. After postdoctoral research at Perimeter Institute and Cologne Institute for Theoretical Physics, he joined Department of physics, Fudan University in January 2018. His main research interest is quantum information theory, including quantum measurements, quantum characterization, verification, and validation (QCVV), entanglement theory, and blind quantum computation etc.</p>
     </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-15T17:00:00+08:00">17:00</time>–<time datetime="2026-12-15T18:00:00+08:00">18:00</time></td><td><a href="#posters">Poster session 1</a></td></tr>
@@ -94,12 +127,20 @@
       <summary aria-label="Abstract for Jingzheng Huang’s talk">Abstract</summary>
       <p>Sensing networks underpin applications ranging from fundamental physics to real-world engineering. Distributed quantum sensing (DQS) can improve measurement performance, but existing protocols typically require multipartite entanglement, which poses substantial challenges for scalable implementation. Moreover, as sensor networks become increasingly interconnected, information sharing among multiple users poses potential risks of information leakage, making privacy protection a critical challenge. To address these challenges, we report two of our recent works: 1) We introduce a DQS protocol based on bidirectional causal routing in a cyclic network, where a single probe sequentially interrogates M independent sensors along two opposite causal routes. By exploiting the noncommutativity between inter-sensor propagation and local sensing operations, the protocol turns propagation from a passive transport process into a source of sensing information, yielding an asymptotic 1/M² scaling of the estimation precision without multipartite entanglement. We experimentally demonstrate the protocol for distributed beam-tilt sensing in a free-space quantum optical network comprising up to 9 sensors, achieving picoradian-level precision in estimating the average tilt angle. 2) We evaluate the maximum information leakage ratio (MILR) for sensing network privacy, and then adding probe squeezing to our cyclic network scheme for privacy enhancement. Here, causal-order switching harnesses intrinsic network propagation dynamics for privacy encoding, while probe squeezing suppresses information leakage through quantum channels and improves global estimation precision. These mechanisms enable an asymptotic exponential enhancement on the privacy with the squeezing level. We experimentally demonstrate this mechanism in distributed beam-tilt sensing using spatially structured light without requiring nonclassical light sources. These results together, identify intrinsic network propagation dynamics as a resource for scalable distributed quantum sensing, which opens a new avenue for continuous-variable sensing networks that combine high precision with enhanced privacy.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Jingzheng Huang">Speaker bio</summary>
+      <p>Huang Jingzheng, received Bachelor degree from Shanghai Jiao Tong University and got his Ph. D. degree from University of Science and Technology in 2014, now works as an associate researcher in Shanghai Jiao Tong University (SJTU). He has long been engaged in research on the mechanisms of quantum sensing technologies and their applications in navigation, electric power systems, and other fields. He has served as Principal Investigator (PI) for 3 projects funded by the National Natural Science Foundation of China (NSFC) and other 6 technology projects. He also participated as the leader of a subtask in a subproject of the national “Science and Technology Innovation 2030 – Quantum Communication and Quantum Computer” Major Project. He has published more than 40 papers in leading international journals, including Nature Communications, Science Advances, Physical Review Letters and so on. He holds 16 authorized Chinese invention patents and has published 1 translated monograph as the first translator. He was selected for the Shanghai Oriental Talent Program (Top Talent Track) in 2025.</p>
+    </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-16T10:30:00+08:00">10:30</time>–<time datetime="2026-12-16T11:00:00+08:00">11:00</time></td><td>Coffee break</td></tr>
 <tr><td class="time"><time datetime="2026-12-16T11:00:00+08:00">11:00</time>–<time datetime="2026-12-16T12:00:00+08:00">12:00</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Yadong Wu</strong><span class="talk-title">Three Paradigms for Learning Scalable Quantum Systems</span>
     <details class="talk-abstract">
       <summary aria-label="Abstract for Yadong Wu’s talk">Abstract</summary>
       <p>Efficiently characterizing scalable quantum systems remains a central challenge in quantum science, primarily due to the exponential growth of Hilbert-space dimensionality with system size. Recent advances in artificial intelligence (AI), particularly in high-dimensional pattern recognition and function approximation, offer promising new approaches to addressing this challenge. Depending on how prior knowledge is incorporated and learning architectures are designed, AI-based approaches to quantum system characterization can be broadly classified into three complementary paradigms: machine learning, deep learning, and language models. In this talk, I will introduce these three paradigms and discuss how each contributes to the characterization of scalable quantum systems. Particular attention will be given to two recent research directions: predicting Wigner functions of bosonic quantum systems and predicting classical shadows of many-body quantum states.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Yadong Wu">Speaker bio</summary>
+      <p>Yadong Wu is a tenure-track Associate Professor at the John Hopcroft Center for Computer Science, Shanghai Jiao Tong University. He received his bachelor's and master's degrees from the UM-SJTU Joint Institute, Shanghai Jiao Tong University, and his Ph.D. from the University of Calgary. Before joining Shanghai Jiao Tong University, he was a postdoctoral researcher at the University of Hong Kong. His current research focuses on applying artificial intelligence to quantum information science. He has published a review article on this topic in Nature Reviews Physics as the corresponding author, along with research articles in leading journals including Physical Review Letters and Nature Communications. His research has also been highlighted by several scientific media outlets, including Nature Computational Science, New Scientist, and DeepTech.</p>
     </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-16T12:00:00+08:00">12:00</time>–<time datetime="2026-12-16T13:30:00+08:00">13:30</time></td><td>Lunch</td></tr>
@@ -108,11 +149,19 @@
       <summary aria-label="Abstract for Yuxuan Du’s talk">Abstract</summary>
       <p>Quantum computing promises to expand the frontiers of scientific discovery, yet scarce and imperfect hardware continues to limit its potential. This talk explores how AI can help overcome these barriers, from statistical learning to AI scientists. First, I will introduce learning-based surrogates that leverage limited quantum measurements to predict outcomes under new conditions, enabling applications such as digital quantum simulation, including regimes beyond the reach of efficient classical simulation. Second, I will present two AI scientists that advance quantum computing by discovering quantum error-correcting codes and accelerating computational quantum science. These advances illustrate how AI can transform both the use and development of quantum computers, paving the way toward more reliable and powerful quantum technologies.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Yuxuan Du">Speaker bio</summary>
+      <p>Yuxuan Du is an Assistant Professor at Nanyang Technological University, specializing in quantum AI, quantum learning theory, and AI for quantum science. His research has appeared in leading venues, including Nature Reviews Physics, Nature Communications, Physical Review Letters, and IEEE TPAMI, and has been featured by Phys.org and MIT Technology Review. He serves on the editorial boards of ACM Transactions on Quantum Computing, Quantum Machine Intelligence, and Neural Networks, and as an Area Chair for NeurIPS, ICML, and ICLR. His distinctions include NeurIPS 2026 Top Area Chair, AAAI 2027 New Faculty Highlights, the ACM SIGSOFT Distinguished Paper Award (ASE 2026), and Stanford/Elsevier's World's Top 2% Scientists recognition.</p>
+    </details>
   </td></tr>
 <tr><td class="time"><time datetime="2026-12-16T14:30:00+08:00">14:30</time>–<time datetime="2026-12-16T15:30:00+08:00">15:30</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Xiongfeng Ma</strong><span class="talk-title">The Power and Limits of Quantum Measurement: From Local Certification to Complexity-Driven Readout</span>
     <details class="talk-abstract">
       <summary aria-label="Abstract for Xiongfeng Ma’s talk">Abstract</summary>
       <p>How much can we learn about a many-body quantum system from measurements, and what resources do we need? I will first introduce *localizable quantumness*. Local measurements on most of a system leave robust signatures of its global properties in the ensemble of conditional states on a small remaining subsystem. This lets us certify multipartite entanglement, circuit complexity, quantum magic, and state fidelity using nonadaptive local Pauli measurements, with sample complexity and noise tolerance independent of system size for broad classes of states. I will then discuss the cost of preparing and cloning conditional states. For random circuits and certain strongly interacting dynamics, the gate cost of preparing these states can scale with the full circuit volume, even when measurements and postselection are allowed. Cloning individual states from an unknown ensemble can require exponentially many copies of its purification. Polynomial-size preparation circuits can remove this sample barrier. Under standard complexity assumptions, cloning can still be computationally hard even when the circuit is known. Finally, I will present a hidden-to-visible transition in quantum observation. Below an architecture-dependent depth scale, some pure-state encodings reveal only an exponentially small fraction of their quantum Fisher information to any allowed readout. Above that scale, randomized measurements based on approximate unitary 3-designs recover a constant fraction for any pure-state encoding.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Xiongfeng Ma">Speaker bio</summary>
+      <p>Xiongfeng Ma is a Professor at the Institute for Interdisciplinary Information Sciences, Tsinghua University. He is a Fellow of the American Physical Society and Optica. He received his B.Sc. from Peking University in 2003 and his Ph.D. from the University of Toronto in 2008. His research spans quantum cryptography, quantum computing, and quantum foundations.</p>
     </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-16T15:30:00+08:00">15:30</time>–<time datetime="2026-12-16T16:00:00+08:00">16:00</time></td><td>Coffee break</td></tr>
@@ -144,6 +193,10 @@
       <summary aria-label="Abstract for Penghui Yao’s talk">Abstract</summary>
       <p>How much computational power can two quantum provers retain when their shared entanglement is noisy? I will discuss a complete classification for two-prover, one-round interactive proofs in which the provers share copies of an EPR pair affected by unital qubit noise. The resulting class is NEXP if the shared state is separable or has quantum maximal correlation strictly less than one. If the state is entangled and its maximal correlation is one, the class is RE. I will also describe two ingredients of the proof: a low-degree approximation that preserves positivity and a dimension-reduction technique we call Pauli folding. This is joint work with Yangjing Dong, Zhenyu Jiang, Minglong Qin, and Haigang Zhou.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Penghui Yao">Speaker bio</summary>
+      <p>Penghui Yao is a professor in the Department of Computer Science and Technology at Nanjing University. He received his PhD from the National University of Singapore and held postdoctoral positions at CWI, the University of Waterloo, and the University of Maryland. His research focuses on quantum algorithms, quantum complexity theory, and applications of Boolean function analysis to quantum computing.</p>
+    </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-17T10:30:00+08:00">10:30</time>–<time datetime="2026-12-17T11:00:00+08:00">11:00</time></td><td>Coffee break</td></tr>
 <tr><td class="time"><time datetime="2026-12-17T11:00:00+08:00">11:00</time>–<time datetime="2026-12-17T12:00:00+08:00">12:00</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Nana Liu</strong><span class="talk-title">Bridging quantum thermodynamics and optimization</span>
@@ -153,6 +206,10 @@
       <p>We turn this connection into an algorithmic framework by minimizing instead the free energy, which balances energy and entropy. This yields a concave dual optimization problem in chemical potentials—the parameters enforcing the constraints—with a generalized quantum thermal state (Boltzmann framework) as the optimal state. Standard methods, including stochastic gradient ascent, can optimize these parameters, while the minimum free energy approaches the minimum energy at low temperature. We develop first- and second-order classical and hybrid quantum–classical algorithms based on this formulation, with provable convergence and runtime guarantees.</p>
       <p>Building on this Boltzmann framework, we extend the thermodynamic interpretation to broader classes of SDPs in quantum information. Trace-one density operators, measurement operators bounded between zero and the identity, and the unbounded positive semidefinite cone admit different thermodynamic regularizations associated with the Boltzmann, Fermi–Dirac, and Bose–Einstein statistics, respectively. In each case, the regularized dual is concave in the chemical potentials and, under suitable regularity assumptions, the regularized primal optimizer has the corresponding thermal form. The dual gradient and Hessian can be evaluated through thermal expectation values and correlation functions, enabling hybrid quantum–classical algorithms for a wide range of SDPs.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Nana Liu">Speaker bio</summary>
+      <p>Nana Liu is a tenured professor and Principal Investigator at Shanghai Jiao Tong University (SJTU), where she leads the Quantum Information and Technologies (QIT) group. She received her doctorate from the University of Oxford as a Clarendon Scholar before joining as a Postdoctoral Research Fellow at the Center for Quantum Technologies in the National University of Singapore and the Singapore University of Technology and Design. She was one of MIT Technology Review’s 10 Innovators Under 35 in the Asia-Pacific region and her current research focus is on quantum computation for scientific computing, including differential equations, optimisation and machine learning.</p>
+    </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-17T12:00:00+08:00">12:00</time>–<time datetime="2026-12-17T13:30:00+08:00">13:30</time></td><td>Lunch</td></tr>
 <tr><td class="time"><time datetime="2026-12-17T13:30:00+08:00">13:30</time>–<time datetime="2026-12-17T14:30:00+08:00">14:30</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">You Zhou</strong><span class="talk-title">Shallow Phase Circuits for Quantum Measurements and Randomness</span>
@@ -160,11 +217,19 @@
       <summary aria-label="Abstract for You Zhou’s talk">Abstract</summary>
       <p>Randomized measurements and quantum randomness are essential tools for quantum information processing, yet their implementation can require substantial quantum resources. In this talk, I will present resource-efficient approaches based on shallow phase circuits built from commuting phase gates and local operations. I will discuss robust phase shadows for estimating global quantum properties under gate-dependent noise, shallow phase shadows for estimating stabilizer-state fidelities at constant circuit depth, and approximate quantum projective designs with relative-error guarantees and constant adaptive depth. These results highlight the potential of structured phase circuits for scalable quantum characterization and randomness generation.</p>
     </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for You Zhou">Speaker bio</summary>
+      <p>You Zhou is an Assistant Professor at the School of Future Information Innovation, Fudan University. He received his bachelor’s degree from Zhejiang University in 2014 and his Ph.D. from Tsinghua University in 2019, followed by postdoctoral research at Harvard University and Nanyang Technological University. His research focuses on quantum information and computation, including randomized measurements, classical shadow tomography, quantum correlations, and quantum simulation algorithms.</p>
+    </details>
   </td></tr>
 <tr><td class="time"><time datetime="2026-12-17T14:30:00+08:00">14:30</time>–<time datetime="2026-12-17T15:30:00+08:00">15:30</time></td><td><span class="session-type">Invited talk</span><strong class="speaker">Qisheng Wang</strong><span class="talk-title">A Unified Complexity Framework for Quantum Property Testing</span>
     <details class="talk-abstract">
       <summary aria-label="Abstract for Qisheng Wang’s talk">Abstract</summary>
       <p>We develop a unified framework for analyzing the complexity of quantum property testing through functionals of the form <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">L</mi><mi>ϕ</mi></msub><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">tr</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">(</mo><mi>d</mi><mi>ρ</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">\mathcal{L}_{\phi}(\rho) = \operatorname{tr}(\phi(d\rho))/d</annotation></semantics></math>, where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math> is an unknown <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math>-dimensional quantum state and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math> is a given function. A master theorem is established that derives sample complexity lower bounds for estimating <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">L</mi><mi>ϕ</mi></msub><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}_\phi(\rho)</annotation></semantics></math> from properties of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math>, combining Haar-random moment encoding with moment matching and best polynomial approximation. Corresponding query complexity lower bounds follow from quantum sample-to-query lifting. The framework yields (nearly) tight bounds for a broad class of problems, including entropy estimation (von Neumann, R\'enyi, and Tsallis), closeness estimation (trace distance and Uhlmann fidelity), spectrum estimation, rank testing (operator rank, Schmidt rank, and matrix product states). In summary, our results resolve several open problems and establish the optimality of 37 quantum algorithms since 2015, up to constant or polylogarithmic factors.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Qisheng Wang">Speaker bio</summary>
+      <p>Qisheng Wang received the B.Sc. and Ph.D. degrees from the Department of Computer Science and Technology, Tsinghua University, Beijing, China, in 2017 and 2022, respectively, under the supervision of Prof. Mingsheng Ying. He is currently an Associate Professor with the School of Computer Science, Shanghai Jiao Tong University, Shanghai, China. Prior to this, from 2022 to 2024, he was an Assistant Professor with the Graduate School of Mathematics, Nagoya University, Nagoya, Japan. From 2024 to 2026, he was a Senior Researcher with the School of Informatics, University of Edinburgh, Edinburgh, U.K. His current research interests include quantum computing, algorithms, and complexity. To date, he has published over 30 papers in theoretical computer science journals (e.g., SICOMP, TIT, I&amp;C) and conferences (e.g., SODA, CCC, ICALP, COLT, ESA).</p>
     </details>
   </td></tr>
 <tr class="break-row"><td class="time"><time datetime="2026-12-17T15:30:00+08:00">15:30</time>–<time datetime="2026-12-17T16:00:00+08:00">16:00</time></td><td>Coffee break</td></tr>
@@ -172,6 +237,10 @@
     <details class="talk-abstract">
       <summary aria-label="Abstract for Yangsen Ye’s talk">Abstract</summary>
       <p>This talk will present recent experiments in quantum error correction and finite-temperature simulation on superconducting quantum processors. It will begin with tunable-coupler architectures and semi-automated calibration, focusing on how they support repeatable, high-fidelity entangling operations. The talk will then describe how syndrome measurements from repeated surface-code cycles reveal correlated errors and signatures of leakage. It will also present an experimental protocol for preparing and characterizing logical magic states. The second part of the talk will introduce quantum kernel function expansion, which uses measurements of real-time quantum dynamics to reconstruct thermodynamic quantities such as free energy and heat capacity. Digital simulations of transverse-field Ising models and analog simulations of the XY model will show how error mitigation improves the reconstruction and how comparisons with exact calculations assess its accuracy.</p>
+    </details>
+    <details class="speaker-bio">
+      <summary aria-label="Speaker bio for Yangsen Ye">Speaker bio</summary>
+      <p>Dr. Yangsen Ye is a researcher at the University of Science and Technology of China. He develops tunable-coupler architectures and calibration methods for superconducting quantum processors. His experimental work includes repeated surface-code error correction, logical magic-state preparation, and quantum simulations of many-body systems at finite temperature. Several of his papers in Physical Review Letters have been selected as Editors’ Suggestions.</p>
     </details>
   </td></tr>
 <tr><td class="time"><time datetime="2026-12-17T17:00:00+08:00">17:00</time>–<time datetime="2026-12-17T17:20:00+08:00">17:20</time></td><td><span class="session-type">Short talk</span><strong class="speaker">Jihun Cha</strong><span class="talk-title">Experimental tomography of a quantum process with indefinite input-output direction</span>
@@ -196,52 +265,85 @@
 </tbody></table></div></section>
 <section id="posters" aria-labelledby="posters-heading">
   <h2 id="posters-heading">Poster titles</h2>
-  <ul class="poster-list" role="list">
-    <li>
-      <strong>Sudden death of entanglement, rebirth of magic</strong>
-      <span>Chenfeng Cao — Freie Universität Berlin and The University of Hong Kong</span>
+  <ol class="poster-list" role="list">
+    <li id="poster-p01">
+      <span class="poster-number">P01</span>
+      <div>
+        <strong>Sudden death of entanglement, rebirth of magic</strong>
+        <span class="poster-presenter">Chenfeng Cao — Freie Universität Berlin and The University of Hong Kong</span>
+      </div>
     </li>
-    <li>
-      <strong>The cost of learning in quantum error correction</strong>
-      <span>Yanglin Hu — The University of Hong Kong</span>
+    <li id="poster-p02">
+      <span class="poster-number">P02</span>
+      <div>
+        <strong>The cost of learning in quantum error correction</strong>
+        <span class="poster-presenter">Yanglin Hu — The University of Hong Kong</span>
+      </div>
     </li>
-    <li>
-      <strong>Generative Pretraining from Local Measurements for Characterizing Quantum Many-Body Ground States</strong>
-      <span>Manwen Liao — The University of Hong Kong</span>
+    <li id="poster-p03">
+      <span class="poster-number">P03</span>
+      <div>
+        <strong>Generative Pretraining from Local Measurements for Characterizing Quantum Many-Body Ground States</strong>
+        <span class="poster-presenter">Manwen Liao — The University of Hong Kong</span>
+      </div>
     </li>
-    <li>
-      <strong>The computational cost of learning unitary channels</strong>
-      <span>Zi-Shen Li — The University of Hong Kong</span>
+    <li id="poster-p04">
+      <span class="poster-number">P04</span>
+      <div>
+        <strong>The computational cost of learning unitary channels</strong>
+        <span class="poster-presenter">Zi-Shen Li — The University of Hong Kong</span>
+      </div>
     </li>
-    <li>
-      <strong>Optimal quantum metrology under energy constraints</strong>
-      <span>Longyun Chen — The University of Hong Kong</span>
+    <li id="poster-p05">
+      <span class="poster-number">P05</span>
+      <div>
+        <strong>Optimal quantum metrology under energy constraints</strong>
+        <span class="poster-presenter">Longyun Chen — The University of Hong Kong</span>
+      </div>
     </li>
-    <li>
-      <strong>Revealing Quantum Chaos with Quantum Sensing</strong>
-      <span>ISAIAS VALLEJO FABILA — Zhejiang University</span>
+    <li id="poster-p06">
+      <span class="poster-number">P06</span>
+      <div>
+        <strong>Revealing Quantum Chaos with Quantum Sensing</strong>
+        <span class="poster-presenter">ISAIAS VALLEJO FABILA — Zhejiang University</span>
+      </div>
     </li>
-    <li>
-      <strong>Information Geometry of Multi-parameter Postselected Quantum Sensing</strong>
-      <span>Cheng Cheng — Zhejiang University</span>
+    <li id="poster-p07">
+      <span class="poster-number">P07</span>
+      <div>
+        <strong>Information Geometry of Multi-parameter Postselected Quantum Sensing</strong>
+        <span class="poster-presenter">Cheng Cheng — Zhejiang University</span>
+      </div>
     </li>
-    <li>
-      <strong>Optimal Distributed Similarity Estimation of Quantum Channels</strong>
-      <span>Congcong Zheng — Southeast University</span>
+    <li id="poster-p08">
+      <span class="poster-number">P08</span>
+      <div>
+        <strong>Optimal Distributed Similarity Estimation of Quantum Channels</strong>
+        <span class="poster-presenter">Congcong Zheng — Southeast University</span>
+      </div>
     </li>
-    <li>
-      <strong>Quantum Memory Advantage for Nonadaptive Unitary Tomography</strong>
-      <span>Congcong Zheng — Southeast University</span>
+    <li id="poster-p09">
+      <span class="poster-number">P09</span>
+      <div>
+        <strong>Quantum Memory Advantage for Nonadaptive Unitary Tomography</strong>
+        <span class="poster-presenter">Congcong Zheng — Southeast University</span>
+      </div>
     </li>
-    <li>
-      <strong>Optimal Tolerant Testing of Lindbladian Dissipation</strong>
-      <span>Jinge Bao — University of Edinburgh</span>
+    <li id="poster-p10">
+      <span class="poster-number">P10</span>
+      <div>
+        <strong>Optimal Tolerant Testing of Lindbladian Dissipation</strong>
+        <span class="poster-presenter">Jinge Bao — University of Edinburgh</span>
+      </div>
     </li>
-    <li>
-      <strong>Sharp Uniform Fisher Information Bounds from Projective Designs</strong>
-      <span>Zhiyao Yang (杨郅垚) — Fudan University</span>
+    <li id="poster-p11">
+      <span class="poster-number">P11</span>
+      <div>
+        <strong>Sharp Uniform Fisher Information Bounds from Projective Designs</strong>
+        <span class="poster-presenter">Zhiyao Yang (杨郅垚) — Fudan University</span>
+      </div>
     </li>
-  </ul>
+  </ol>
 </section>
 <p><a class="calendar" href="index.html">Back to workshop home</a></p>
 </main><footer><div class="wrap footer-inner"><span>QICI Shanghai Workshop · 2026</span><span>HKU CDS · Shanghai</span></div></footer><a class="back-to-top" href="#top" aria-label="Back to top" hidden><span aria-hidden="true">↑</span> Back to top</a>
